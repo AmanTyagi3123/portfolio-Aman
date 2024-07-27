@@ -1,0 +1,179 @@
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: 0.5s;
+}
+
+.banner::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner .item {
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner .bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    transition: 1s;
+}
+
+.bgImg.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.banner .content {
+    position: relative;
+    height: 100vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(500px);
+    transition: 1s;
+    margin-top: -20px; 
+}
+
+.banner .content.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 0; 
+}
+
+.banner .content p {
+    position: relative;
+    font-family:  cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.banner .content p::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: -15px;
+}
+
+.banner .content .social-links {
+    font-size: 24px; 
+}
+
+.markButton:hover,
+.markButton.active {
+    color: var(--primary);
+}
+
+p::before {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #ffffff;
+    z-index: -1; 
+}
+
+.subtitle {
+    position: absolute;
+    top: 20%;
+    right: 100px;
+    color: #ffffff;
+    z-index: 1000;
+    display: inline-flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px; 
+}
+
+.subtitle::after {
+    position: absolute;
+    content: '';
+    left: -100px;
+    bottom: 45px;
+    height: 5px;
+    width: 30vw;
+    background: var(--primary);
+}
+
+.subtitle .slogan {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.subtitle .number {
+    margin-top: 10px;
+    font-size: 7rem;
+    font-weight: 800;
+    color: var(--primary);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: 1s;
+}
+
+.subtitle .number.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+    .banner .content {
+        width: 80%; 
+    }
+
+    .subtitle {
+        right: 20px; 
+        top: 10%; 
+        gap: 15px; 
+    }
+
+    .subtitle::after {
+        left: -50px; 
+        width: 50%; 
+    }
+
+    .subtitle .slogan {
+        font-size: 2rem;
+    }
+
+    .subtitle .number {
+        font-size: 5rem; 
+    }
+}

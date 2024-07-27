@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-countup": "^6.5.3",
+    "react-simple-typewriter": "^5.0.1",
+    "swiper": "^11.1.1"
+  }
+}

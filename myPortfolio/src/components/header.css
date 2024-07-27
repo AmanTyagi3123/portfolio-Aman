@@ -1,0 +1,126 @@
+#header{
+    transition: ease-in-out 1s;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+}
+
+#header * {
+    transition: ease-in-out 0.5s;
+}
+
+#header h1{
+    font-size: 8rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+}
+
+#header h1 a,
+#header h1 a:hover{
+    color: #fff;
+    line-height: 1;
+    display: inline-block;
+}
+
+#header h2{
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.8);
+}
+
+#header h2 span {
+    color: orange;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 6px;
+}
+
+#header img{
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 992px){
+    #header h1{
+        font-size: 3.5rem;
+    }
+    #header h2{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    #header .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+#header.header-top{
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+}
+
+#header.header-top .social-links,
+#header.header-top h2{
+    display: none;
+}
+
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  h2 span {
+    display: inline-block;
+    overflow: hidden;
+    border-bottom: 2px solid transparent; 
+    padding-bottom: 6px;
+    position: relative;
+  }
+
+  h2 span::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--primary); 
+    animation: typewriter 1.5s steps(40) 1s 1 normal both; 
+  }
+  
+
+#header.header-top h1{
+    margin-right: auto;
+    font-size: 2.5rem;
+}
+
+#header.header-top .container{
+    display: flex;
+    align-items: center;
+}
+
+#header.header-top .navbar{
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    #header.header-top{
+        height: 60px;
+    }
+    #header.header-top h1{
+        font-size: 26px;
+    }
+}
