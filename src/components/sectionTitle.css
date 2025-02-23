@@ -1,4 +1,4 @@
-.section-title h2{
+.section-title h2 {
     font-size: 0.9rem;
     font-weight: 500;
     padding: 0;
@@ -7,22 +7,71 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #aaaaaa;
-}
-
-.section-title h2::after{
+    text-align: center; 
+  }
+  
+  .section-title h2::after {
     content: '';
     width: 120px;
     height: 1px;
     display: inline-block;
     background: var(--primary);
     margin: 4px 10px;
-}
-
-.section-title p{
+  }
+  
+  .section-title p {
     margin: 0;
     margin: -15px 0 15px 0;
     font-size: 2.5rem;
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
-}
+    text-align: center; 
+  }
+  
+  @media (max-width: 992px) {
+    .section-title h2 {
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+  
+    .section-title h2::after {
+      width: 80px;
+      margin: 4px 5px;
+    }
+  
+    .section-title p {
+      font-size: 2rem;
+      margin: -10px 0 10px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .section-title h2 {
+      font-size: 0.7rem;
+    }
+  
+    .section-title h2::after {
+      width: 60px;
+    }
+  
+    .section-title p {
+      font-size: 1.8rem;
+      margin: -8px 0 8px 0;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .section-title h2 {
+      font-size: 0.6rem;
+    }
+  
+    .section-title h2::after {
+      width: 40px;
+    }
+  
+    .section-title p {
+      font-size: 1.5rem;
+      margin: -5px 0 5px 0;
+    }
+  }
