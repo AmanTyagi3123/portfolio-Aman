@@ -4,7 +4,7 @@ function SkillBar({skill, active}) {
   return (
     <div className="progress">
         <span className="skill">
-            {skill.name} <i className='val'>{skill.percentage}</i>
+            {skill.name} <i className='val'>{skill.proficiency}</i>
         </span>
         <div className="progress-bar-wrap">
             <div

@@ -1,34 +1,40 @@
 const SkillsData = [
     {
         _id: 1,
-        percentage: '90%',
-        name: 'HTML',
+        proficiency: 'Highly Proficient',
+        percentage: '95%',
+        name: 'Data Structures & Algorithms',
     },
     {
         _id: 2,
-        percentage: '80%',
-        name: 'CSS',
+        proficiency: 'Highly Proficient',
+        percentage: '90%',
+        name: 'C++',
     },
     {
         _id: 3,
-        percentage: '95%',
-        name: 'JavaScript',
+        proficiency: 'Proficient',
+        percentage: '85%',
+        name: 'Competitive Programming',
     },
     {
         _id: 4,
-        percentage: '85%',
-        name: 'React.js',
+        proficiency: 'Proficient',
+        percentage: '80%',
+        name: 'JavaScript',
     },
     {
         _id: 5,
-        percentage: '98%',
-        name: 'C Plus Plus',
+        proficiency: 'Proficient',
+        percentage: '75%',
+        name: 'React.js',
     },
     {
         _id: 6,
-        percentage: '99%',
-        name: 'Gaming',
+        proficiency: 'Comfortable',
+        percentage: '70%',
+        name: 'Web Development',
     },
-]
+];
 
 export default SkillsData;
