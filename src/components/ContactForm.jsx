@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './contactForm.css';
+import emailjs from '@emailjs/browser';
 
 function ContactForm() {
+
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const formRef = useRef();
+
     const initialState = {
         fullname: '',
         email: '',
@@ -17,15 +23,28 @@ function ContactForm() {
         setText({...text, [name]:value, result:''});   
     }
 
-    const handleSubmitMessage = e=>{
-        e.preventDefault();
-        if(text.fullname==='' || text.email==='' || text.message===''){
-            setText({...text, result: 'incomplete'})
-        }
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      if(text.fullname==='' || text.email==='' || text.message===''){
+        setText({...text, result: 'incomplete'})
     }
+  
+      emailjs.sendForm('service_rnz4tq3', 'template_6efpecj', formRef.current, {
+          publicKey: 'LjUBnpTvGBgNPQlCy',
+        })
+        .then(
+          (result) => {
+            setSuccess(true);
+          },
+          (error) => {
+            setError(true);
+          },
+        );
+    };
 
   return (
-    <form className='contact-form mt-4' onSubmit={handleSubmitMessage}>
+    <form ref={formRef} onSubmit={sendEmail} className='contact-form mt-4'>
         <div className='row'>
             <div className="col-md-6 form-group">
                 <input 
@@ -78,6 +97,10 @@ function ContactForm() {
         <div className="text-center">
             <button type='submit'>Send Message</button>
         </div>
+        <div className='text-center'>
+          {error && "Failed to send message!"}
+          {success && "Successfully sent message!"}
+        </div>     
     </form>
   )
 }
