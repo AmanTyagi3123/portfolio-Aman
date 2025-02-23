@@ -3,30 +3,69 @@
     display: block;
     background: none;
     border-radius: 0;
-}
-
-.skills .progress .skill {
+    margin-bottom: 20px; 
+  }
+  
+  .skills .progress .skill {
     padding: 10px 0;
     margin: 0;
     text-transform: uppercase;
     display: block;
     font-weight: 600;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #fff;
-}
-
-.skills .progress .skill .val{
+    font-size: 0.9rem; 
+  }
+  
+  .skills .progress .skill .val {
     float: right;
     font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-    background: rgba(255,255,255,0.2);
-}
-
-.skills .progress-bar{
+    font-size: 0.9rem; 
+  }
+  
+  .skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px; 
+    overflow: hidden; 
+  }
+  
+  .skills .progress-bar {
     width: 1px;
     height: 10px;
     transition: 0.9s;
     background-color: var(--primary);
-}
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .skills .progress {
+      height: 50px; 
+    }
+  
+    .skills .progress .skill,
+    .skills .progress .skill .val {
+      font-size: 0.60rem; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills .progress {
+      height: 40px; 
+    }
+  
+    .skills .progress .skill,
+    .skills .progress .skill .val {
+      font-size: 0.55rem; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .skills .progress {
+      height: 35px; 
+    }
+  
+    .skills .progress .skill,
+    .skills .progress .skill .val {
+      font-size: 0.50rem; 
+    }
+  }

@@ -1,26 +1,74 @@
-.interests .icon-box{
+.interests .icon-box {
     display: flex;
     align-items: center;
     padding: 20px;
-    background: rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.08);
     transition: ease-in-out 0.3s;
-}
-
-.interests .icon-box i{
+    margin-bottom: 20px; 
+  }
+  
+  .interests .icon-box i {
     font-size: 32px;
     padding-right: 10px;
     line-height: 1;
-}
-
-.interests .icon-box h3{
+  }
+  
+  .interests .icon-box h3 {
     font-weight: 700;
     margin: 0;
     padding: 0;
     line-height: 1;
     font-size: 16px;
     color: #fff;
-}
-
-.interests .icon-box:hover{
-    background: rgba(255,255,255,0.12);
-}
+  }
+  
+  .interests .icon-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  @media (max-width: 992px) {
+    .interests .icon-box {
+      padding: 15px; 
+    }
+  
+    .interests .icon-box i {
+      font-size: 28px; 
+    }
+  
+    .interests .icon-box h3 {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .interests .icon-box {
+      padding: 12px; 
+      flex-direction: column; 
+      text-align: center; 
+      align-items: center; 
+    }
+  
+    .interests .icon-box i {
+      font-size: 24px; 
+      padding-right: 0; 
+      margin-bottom: 5px; 
+    }
+  
+    .interests .icon-box h3 {
+      font-size: 13px; 
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .interests .icon-box {
+      padding: 10px; 
+    }
+  
+    .interests .icon-box i {
+      font-size: 20px; 
+    }
+  
+    .interests .icon-box h3 {
+      font-size: 12px; 
+    }
+  }
