@@ -1,7 +1,7 @@
 import React from 'react';
 import './about.css';
 import SectionTitle from '../components/SectionTitle';
-import profileImage from '../images/aman-avatar.jpg';
+import profileImage from '../images/aman-avatar.jpeg';
 import Skills from '../components/Skills';
 import Interests from '../components/Interests';
 
